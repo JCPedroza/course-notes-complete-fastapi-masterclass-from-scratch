@@ -19,7 +19,7 @@ def get_api_static():
 
 
 # Path parameters are declared using {} and are arguments to the handler.
-# Type annotations provide automatic type validation.
+# Type hints provide automatic type validation.
 @app.get("/api/{id}")
 def get_api_id(id: int):
     return {"message": f"path is dynamic: /api/{id}"}
@@ -35,7 +35,7 @@ class ValidColor(str, Enum):
     black = "black"
 
 
-# Using your enum as type annotation enables automatic type validation.
+# Using your enum as type hint enables automatic type validation.
 @app.get("/color/{valid_color}")
 def get_color_valid(valid_color: ValidColor):
     if valid_color is ValidColor.red:
@@ -45,3 +45,10 @@ def get_color_valid(valid_color: ValidColor):
         return {"valid_color": valid_color, "message": "grass is green"}
 
     return {"valid_color": valid_color, "message": "color is valid"}
+
+
+# Query parameters are declared as path operation function parameters.
+# Optional query parameters have a default value.
+@app.get("/details/{id}")
+def get_details_id(id: int, view: str = "classic", sort: bool = False):
+    return {"path": f"/details/{id}", "query": f"?view={view}&sort={sort}"}
