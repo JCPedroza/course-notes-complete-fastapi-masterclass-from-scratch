@@ -2,8 +2,8 @@
 
 Course by Catalin Stefan.
 
-Notes by JCPedroza.
+Code and notes by JCPedroza.
 
-Other useful resources for these notes:
+Other resources used:
   * The official FastAPI docs.
   * MDN Web Docs.
