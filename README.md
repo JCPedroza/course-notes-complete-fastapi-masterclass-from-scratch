@@ -6,3 +6,4 @@ Notes by JCPedroza.
 
 Other useful resources for these notes:
   * The official FastAPI docs.
+  * MDN Web Docs.
