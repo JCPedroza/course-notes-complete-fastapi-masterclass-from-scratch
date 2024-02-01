@@ -18,15 +18,3 @@ The general pettern is:
 @<FastAPI instance>.<operation>(<path pattern>)
 <path operation function declaration>
 ```
-
-```python
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-def get_root():
-    return {"message": "Hello world!"}
-
-```
