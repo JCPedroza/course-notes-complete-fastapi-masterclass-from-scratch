@@ -1,4 +1,4 @@
-# Part 00 - Hello World
+# Part 00 - Getting Started
 
 Routing involves connecting together http verbs, paths, and handlers.
 
